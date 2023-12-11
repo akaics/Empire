@@ -15,7 +15,6 @@ namespace Empire.Data
 
 
         //Opretter tables:
-        public DbSet<Bruger> Bruger { get; set; }
 
         public DbSet<Skin> Skin { get; set; }
         public DbSet<Søgekriterier> Søgekriterier { get; set; }
