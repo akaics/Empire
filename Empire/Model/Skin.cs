@@ -12,7 +12,7 @@ namespace Empire.Model
         public int Id { get; set; }
 
         // Og laver SkinNavn til required 
-        [Required]
+        [Required] //argumenter
         public string SkinNavn { get; set; }
         public string Stand { get; set; }
         public string VåbenType { get; set; }

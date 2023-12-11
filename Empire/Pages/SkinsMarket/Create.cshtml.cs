@@ -27,8 +27,8 @@ namespace Empire.Pages.SkinsMarket
         
         public async Task<IActionResult> OnPost(Skin skin)
         {
-            await _db.Skin.AddAsync(skin);
-            // Saving the changes to the database
+             _db.Skin.Add(skin);
+            // Saving the changes from website to the database
             await _db.SaveChangesAsync();
             // Return til SkinMarket siden efter skin opslaget er oprettet
             return RedirectToPage("Index");
