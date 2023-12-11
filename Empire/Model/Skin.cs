@@ -20,6 +20,6 @@ namespace Empire.Model
 
         public string Beskrivelse { get; set; }
 
-        //Mangler property for billede
+      
     }
 }
