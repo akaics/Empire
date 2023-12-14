@@ -9,21 +9,13 @@
     </div>
 
 
-    //Vi bruger bootstrap classes til at lave buttons (knapperne)
+    <!--- Vi bruger bootstrap classes til at lave buttons (knapperne) -->
     <div class="row">
         <div class="col-8"></div>
 
         <div class="col-4 text-right">
             <a asp-page="create" class="btn btn-primary ml-auto mr-3">
                 Opret ny Skin
-            </a>
-
-            <a asp-page="delete" class="btn btn-primary">
-                Slet Skin
-            </a>
-
-            <a asp-page="update" class="btn btn-primary">
-                Opdatér Skin
             </a>
         </div>
     </div>
@@ -46,12 +38,12 @@
             @foreach (var skin in Model.Skins)
             {
                 <tr>
-                    <td>@skin.Id</td>
+                    <td>@skin.Id</td> 
                     <td>@skin.SkinNavn</td>
                     <td>@skin.Stand</td>
                     <td>@skin.VåbenType</td>
                     <td>@skin.Pris</td>
-                    <td>@skin.Beskrivelse</td>
+                    <td>@skin.Beskrivelse</td> 
                 </tr>
             }
         </tbody>
