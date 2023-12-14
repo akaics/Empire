@@ -1,6 +1,7 @@
 ﻿@page
 @model Empire.Pages.SkinsMarket.IndexModel
 
+
 <div class="container p-3">
     <div class="row pt-4">
         <div class="col-12">
@@ -31,6 +32,7 @@
                 <th>Våbentype</th>
                 <th>Pris</th>
                 <th>Beskrivelse</th>
+                <th></th>
             </tr>
         </thead>
         <!--Her bliver listen "vist frem" aka Read metode, vha en foreach loop.-->
@@ -44,6 +46,14 @@
                     <td>@skin.VåbenType</td>
                     <td>@skin.Pris</td>
                     <td>@skin.Beskrivelse</td> 
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@skin.Id" class="btn btn-primary mx-2">
+                            <i class="bi bi-pencil-square"></i>
+                        </a>
+                        <a asp-page="Delete" class="btn btn-danger mx-2">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                    </td>
                 </tr>
             }
         </tbody>
