@@ -25,11 +25,11 @@ namespace Empire.Pages.SkinsMarket
         }
 
         
-        public async Task<IActionResult> OnPost()
+        public async Task<IActionResult> OnPost(Skin skin)
         {
             if (ModelState.IsValid)
             {
-                _db.Skin.Update(Skin);
+                _db.Skin.Update(skin);
 
                 await _db.SaveChangesAsync();
 
