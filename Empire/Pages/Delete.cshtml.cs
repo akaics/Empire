@@ -7,9 +7,7 @@ namespace Empire.Pages
 {
     public class DeleteModel : PageModel
     {
-        // Implementerer en OnPost handler, så opslaget kan blive postet i hjemmesiden + i databasen
-        // Bruger også dependency injection for at få det på databasen også
-
+       
         private readonly ApplicationDbContext _db;
         public Skin Skin { get; set; }
 
@@ -24,13 +22,19 @@ namespace Empire.Pages
             Skin = _db.Skin.Find(id);
         }
 
-
+        // Delete method
         public async Task<IActionResult> OnPost(Skin skin)
         {
             if (ModelState.IsValid)
             {
+                
                 var skinFromDb = _db.Skin.Find(Skin.Id);
-                await _db.SaveChangesAsync();
+                if (skinFromDb == null)
+                {
+                    _db.Skin.Remove(skinFromDb);
+                    await _db.SaveChangesAsync();
+
+                }
             }
             return RedirectToPage("Index");
         }
