@@ -20,6 +20,12 @@ namespace Empire.Model
 
         public string Beskrivelse { get; set; }
 
-      
+        public Skin()
+        {
+            SkinNavn = string.Empty;
+            Stand = string.Empty;
+            VåbenType = string.Empty;
+            Beskrivelse = string.Empty;
+        }
     }
 }
