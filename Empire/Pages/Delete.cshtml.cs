@@ -2,6 +2,7 @@ using Empire.Data;
 using Empire.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Reflection.Metadata.Ecma335;
 
 namespace Empire.Pages
 {
@@ -29,14 +30,15 @@ namespace Empire.Pages
             {
                 
                 var skinFromDb = _db.Skin.Find(Skin.Id);
-                if (skinFromDb == null)
+                if (skinFromDb != null)
                 {
                     _db.Skin.Remove(skinFromDb);
                     await _db.SaveChangesAsync();
 
                 }
+                return RedirectToPage("Index");
             }
-            return RedirectToPage("Index");
+            return Page();
         }
     }
 }
