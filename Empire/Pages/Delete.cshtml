@@ -9,25 +9,25 @@
     </div>
     <div class="mb-3">
         <label asp-for="Skin.SkinNavn"></label>
-        <input asp-for="@Model.Skin.SkinNavn" class="form-control" />
+        <input asp-for="@Model.Skin.SkinNavn" disabled class="form-control" />
     </div>
     <div class="mb-3">
         <label asp-for="Skin.Stand"></label>
-        <input asp-for="@Model.Skin.Stand" class="form-control" />
+        <input asp-for="@Model.Skin.Stand" disabled class="form-control" />
     </div>
     <div class="mb-3">
         <label asp-for="Skin.VåbenType"></label>
-        <input asp-for="@Model.Skin.VåbenType" class="form-control" />
+        <input asp-for="@Model.Skin.VåbenType" disabled class="form-control" />
     </div>
     <div class="mb-3">
         <label asp-for="Skin.Pris"></label>
-        <input asp-for="@Model.Skin.Pris" class="form-control" />
+        <input asp-for="@Model.Skin.Pris" disabled class="form-control" />
     </div>
     <div class="mb-3">
         <label asp-for="Skin.Beskrivelse"></label>
-        <input asp-for="@Model.Skin.Beskrivelse" class="form-control" />
+        <input asp-for="@Model.Skin.Beskrivelse"disabled class="form-control" />
     </div>
-    <button type="submit" class="btn btn-primary" style="width:150px;">Update</button>
+    <button type="submit" class="btn btn-danger" style="width:150px;">Slet</button>
     <a asp-page="Index" class="btn btn-secondary" style="width:150px;">Gå tilbage</a>
     </div>
 </form>
