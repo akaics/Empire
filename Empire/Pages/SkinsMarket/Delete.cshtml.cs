@@ -8,7 +8,7 @@ namespace Empire.Pages
 {
     public class DeleteModel : PageModel
     {
-       
+
         private readonly ApplicationDbContext _db;
         public Skin Skin { get; set; }
 
@@ -26,16 +26,14 @@ namespace Empire.Pages
         // Delete method
         public async Task<IActionResult> OnPost(Skin skin)
         {
-            if (ModelState.IsValid)
-            {
-                
-                var skinFromDb = _db.Skin.Find(Skin.Id);
-                if (skinFromDb != null)
-                {
-                    _db.Skin.Remove(skinFromDb);
-                    await _db.SaveChangesAsync();
 
-                }
+
+
+            var skinFromDb = _db.Skin.Find(Skin.Id);
+            if (skinFromDb != null)
+            {
+                _db.Skin.Remove(skinFromDb);
+                await _db.SaveChangesAsync();
                 return RedirectToPage("Index");
             }
             return Page();
