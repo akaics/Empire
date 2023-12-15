@@ -29,13 +29,10 @@ namespace Empire.Pages
         {
             if (ModelState.IsValid)
             {
-                _db.Skin.Remove(skin);
-
+                var skinFromDb = _db.Skin.Find(Skin.Id);
                 await _db.SaveChangesAsync();
-
-                return RedirectToPage("Index");
             }
-            return Page();
+            return RedirectToPage("Index");
         }
     }
 }
