@@ -2,10 +2,16 @@
 @model Empire.Pages.SkinsMarket.IndexModel
 
 
-<!--Bruger en if statement til at "fremvise" vores "oprettelses/ændring/slet besked-->
+<!--Bruger en if statement til at "fremvise" vores "oprettelses/ændring/slet besked, plus bruger javascript-->
 @if (TempData["success"] != null)
 {
-    <h3>@TempData["success"]</h3>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr.success('@TempData["success"]');
+    </script>
+
+    
 }
 
 
