@@ -30,6 +30,8 @@ namespace Empire.Pages.SkinsMarket
              _db.Skin.Add(skin);
             // Saving the changes from website to the database
             await _db.SaveChangesAsync();
+            // Bruger TempData til at vise en besked og give brugeren besked på at skin'et er blevet oprettet.
+            TempData["success"] = "Skinopslaget er nu blevet oprettet";
             // Return til SkinMarket siden efter skin opslaget er oprettet
             return RedirectToPage("Index");
 

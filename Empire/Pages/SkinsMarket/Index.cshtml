@@ -2,6 +2,13 @@
 @model Empire.Pages.SkinsMarket.IndexModel
 
 
+<!--Bruger en if statement til at "fremvise" vores "oprettelses/ændring/slet besked-->
+@if (TempData["success"] != null)
+{
+    <h3>@TempData["success"]</h3>
+}
+
+
 <div class="container p-3">
     <div class="row pt-4">
         <div class="col-12">

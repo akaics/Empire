@@ -32,7 +32,8 @@ namespace Empire.Pages.SkinsMarket
                 _db.Skin.Update(skin);
 
                 await _db.SaveChangesAsync();
-
+                //Fortæller brugeren at opslaget er blevet ændret
+                TempData["success"] = "Skinopslaget er nu blevet ændret";
                 return RedirectToPage("Index");
             }
             return Page();

@@ -26,11 +26,13 @@ namespace Empire.Pages
         // Delete method
         public async Task<IActionResult> OnPost(Skin skin)
         {
-          
-                _db.Skin.Remove(skin);
-                await _db.SaveChangesAsync();
-                return RedirectToPage("Index");
-           
+
+            _db.Skin.Remove(skin);
+            await _db.SaveChangesAsync();
+
+            TempData["success"] = "Skinopslaget er nu blevet slettet";
+            return RedirectToPage("Index");
+
         }
     }
 }
