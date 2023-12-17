@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Reflection.Metadata.Ecma335;
 
-namespace Empire.Pages
+namespace Empire.Pages.Admin.SkinsMarket
 {
     public class DeleteModel : PageModel
     {

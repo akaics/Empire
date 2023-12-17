@@ -3,7 +3,7 @@ using Empire.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Empire.Pages.SkinsMarket
+namespace Empire.Pages.Admin.SkinsMarket
 {
     public class IndexModel : PageModel
     {
