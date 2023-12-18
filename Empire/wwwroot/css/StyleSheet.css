@@ -13,6 +13,13 @@
  */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
+
+/* Overriding the Vapor theme styles for Toastr success notification */
+body .toast-success {
+    background-color: #8FDB96 !important; /* lysegrøn baggrund */
+    color: #FFFFFF !important; /*hvid farve til teksten*/
+}
+
 :root,
 [data-bs-theme=light] {
     --bs-blue: #1ba2f6;
