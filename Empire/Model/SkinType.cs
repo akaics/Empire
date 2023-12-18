@@ -2,7 +2,7 @@
 
 namespace Empire.Model
 {
-    public class Salgsopslag
+    public class SkinType
     {
         // Vi opretter properties som vi vil have i tabellen.
 
@@ -10,8 +10,6 @@ namespace Empire.Model
 
         [Key]
         public int Id { get; set; }
-        public string Skin { get; set; }
-        public double Pris { get; set; }
-        public DateTime OprettelsesDato { get; set; }
+        public string Type { get; set; }
     }
 }

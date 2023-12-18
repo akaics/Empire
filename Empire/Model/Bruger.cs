@@ -2,7 +2,7 @@
 
 namespace Empire.Model
 {
-    public class Søgekriterier
+    public class Bruger
     {
         // Vi opretter properties som vi vil have i tabellen.
 
@@ -17,5 +17,8 @@ namespace Empire.Model
         public string SkinNavn { get; set; }
         public string Stand { get; set; }
         public string VåbenType { get; set; }
+        public double Pris { get; set; }
+
+
     }
 }
