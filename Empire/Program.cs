@@ -1,5 +1,7 @@
 using Empire.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Empire.Areas.Identity.Data;
 
 namespace Empire
 {
@@ -14,6 +16,8 @@ namespace Empire
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
                 builder.Configuration.GetConnectionString("DefaultConnection")
                 ));
+
+            builder.Services.AddDefaultIdentity<EmpireUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<EmpireContext>();
 
             var app = builder.Build();
 
