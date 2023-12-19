@@ -11,13 +11,22 @@ namespace Empire
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            // Add services to the container
             builder.Services.AddRazorPages();
+
+            // Configure ApplicationDbContext
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
                 builder.Configuration.GetConnectionString("DefaultConnection")
-                ));
+            ));
 
-            builder.Services.AddDefaultIdentity<EmpireUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<EmpireContext>();
+            // configure Identity with Application DbContext
+            builder.Services.AddDefaultIdentity<EmpireUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            // Configure EmpireDbContext
+            builder.Services.AddDbContext<EmpireContext>(options => options.UseSqlServer(
+                builder.Configuration.GetConnectionString("EmpireConnection")
+            ));
 
             var app = builder.Build();
 
