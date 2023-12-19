@@ -23,7 +23,7 @@ namespace Empire
             builder.Services.AddDefaultIdentity<EmpireUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            // Configure EmpireDbContext
+            // Configure Empire Db Context
             builder.Services.AddDbContext<EmpireContext>(options => options.UseSqlServer(
                 builder.Configuration.GetConnectionString("EmpireConnection")
             ));
