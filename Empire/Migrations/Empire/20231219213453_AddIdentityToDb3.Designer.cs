@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Empire.Migrations.Empire
 {
     [DbContext(typeof(EmpireContext))]
-    [Migration("20231219212936_AddIdentityToDbbbb")]
-    partial class AddIdentityToDbbbb
+    [Migration("20231219213453_AddIdentityToDb3")]
+    partial class AddIdentityToDb3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

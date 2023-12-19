@@ -5,7 +5,7 @@
 namespace Empire.Migrations.Empire
 {
     /// <inheritdoc />
-    public partial class AddIdentityToDbbbb : Migration
+    public partial class AddIdentityToDb3 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
