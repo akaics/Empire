@@ -12,9 +12,11 @@ public class EmpireContext : IdentityDbContext<EmpireUser>
     {
     }
 
+    public DbSet<EmpireUser> EmpireUsers { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
+  
         
     }
 }
