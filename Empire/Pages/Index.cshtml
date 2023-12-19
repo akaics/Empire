@@ -1,19 +1,45 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "SKINEMPIRE BY US";
 }
 
+<!--CSS--> 
 <style>
-
     .deepskyblue-text {
         color: deepskyblue;
+    }
+
+    .orange-text {
+        color: orange; /* defining color (orange) */
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    h1.display-4 {
+        font-size: 3rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .knife-image {
+        width: 7rem;
+        margin-left: -50px;
+        margin-top: -10px;
     }
 </style>
 
 <div class="text-center">
-    <h1 class="display-4 deepskyblue-text">Welcome to <br>SkinEmpire</h1>
-
+    <h1 class="display-4 deepskyblue-text">
+        <strong>S K I N <span class="orange-text">E M P I R E</span></strong>
+    </h1>
+    <img class="knife-image" src="~/images/karakara.png" alt="Knife Image">
 </div>
 
 <div>
