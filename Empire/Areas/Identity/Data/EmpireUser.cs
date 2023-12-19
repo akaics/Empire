@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Empire.Areas.Identity.Data;
 
-// Add profile data for application users by adding properties to the EmpireUser class
+
 public class EmpireUser : IdentityUser
 {
 }

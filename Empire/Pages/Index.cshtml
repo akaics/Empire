@@ -1,17 +1,22 @@
-﻿@page
+﻿
+@page
+
+<!--Credits:
+    Index.cshtml kodet af Nuriye Erdogan
+-->
 @model IndexModel
 @{
     ViewData["Title"] = "SKINEMPIRE BY US";
 }
 
-<!--CSS--> 
+<!--CSS-->
 <style>
     .deepskyblue-text {
         color: deepskyblue;
     }
 
     .orange-text {
-        color: orange; /* defining color (orange) */
+        color: orange; /* definerer farven vi vil bruge til 'EMPIRE' (orange) */
     }
 
     .text-center {
@@ -33,7 +38,23 @@
         margin-left: -50px;
         margin-top: -10px;
     }
+
+/*Dette billede er 'rouletten' af Skins, som overlapper vores main banner. Her er style for den (CSS) */
+    .overlap-container {
+        position: relative;
+        overflow: hidden; 
+    }
+
+    .vigtigroulette-image {
+        width: 100%; 
+        height: auto; 
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 </style>
+
+<!--skriver html kode for vores Overskrift (h1) -->
 
 <div class="text-center">
     <h1 class="display-4 deepskyblue-text">
@@ -42,6 +63,9 @@
     <img class="knife-image" src="~/images/karakara.png" alt="Knife Image">
 </div>
 
-<div>
+<!--html kode for de to billeder på siden: -->
+
+<div class="overlap-container">
+    <img class="vigtigroulette-image" src="~/images/vigtigroulette.png" alt="Vigtig Roulette Image">
     <img src="~/images/banner.jpg" style="width: 100%;">
 </div>

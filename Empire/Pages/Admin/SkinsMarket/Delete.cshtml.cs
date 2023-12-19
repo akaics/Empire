@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Reflection.Metadata.Ecma335;
 
+/* Credits:
+ * Kodet af Nuriye og Gülsüm Erdogan
+ */
 namespace Empire.Pages.Admin.SkinsMarket
 {
     public class DeleteModel : PageModel
@@ -23,7 +26,7 @@ namespace Empire.Pages.Admin.SkinsMarket
             Skin = _db.Skin.Find(id);
         }
 
-        // Delete method
+        // Delete metode:
         public async Task<IActionResult> OnPost(Skin skin)
         {
 

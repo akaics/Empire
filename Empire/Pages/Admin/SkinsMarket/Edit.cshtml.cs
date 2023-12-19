@@ -3,6 +3,9 @@ using Empire.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
+/* Credits:
+ * Kodet af Nuriye og Gülsüm Erdogan
+ */
 namespace Empire.Pages.Admin.SkinsMarket
 {
     public class EditModel : PageModel
@@ -25,6 +28,7 @@ namespace Empire.Pages.Admin.SkinsMarket
         }
 
         
+        //Update metode:
         public async Task<IActionResult> OnPost(Skin skin)
         {
             if (ModelState.IsValid)

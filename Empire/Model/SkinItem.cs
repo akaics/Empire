@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+/*Credits:
+ * Kodet af Gülsüm Erdogan */
 namespace Empire.Model
 {
     public class SkinItem

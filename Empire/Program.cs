@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Empire.Areas.Identity.Data;
 
+/*Credits: 
+RazorPages applikation og projekt startet af Nuriye og Gülsüm Erdogan*/
+
 namespace Empire
 {
     public class Program
@@ -23,7 +26,7 @@ namespace Empire
             builder.Services.AddDefaultIdentity<EmpireUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            // Configure Empire Db Context
+            // Konfigurerer Empire Db Context
             builder.Services.AddDbContext<EmpireContext>(options => options.UseSqlServer(
                 builder.Configuration.GetConnectionString("SharedConnection")
             ));

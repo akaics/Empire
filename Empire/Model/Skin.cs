@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+/*Credits:
+ * Kodet af Nuriye Erdogan */
 namespace Empire.Model
 {
     public class Skin

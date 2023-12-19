@@ -13,8 +13,12 @@
  */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
+/*Credit: Vapor theme er sat ind af Gülsüm Erdogan
+    Redigeret af og tilføjet Toastr ændring: Nuriye Erdogan
+*/
 
-/* Overriding the Vapor theme styles for Toastr success notification */
+
+/*Vores Toastr 'success' alert skiftede farve pga themen, og vi vil have den til at være grøn igen ved at override:*/
 body .toast-success {
     background-color: #8FDB96 !important; /* lysegrøn baggrund */
     color: #FFFFFF !important; /*hvid farve til teksten*/

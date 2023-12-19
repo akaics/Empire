@@ -2,7 +2,9 @@ using Empire.Data;
 using Empire.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
+/* Credits:
+ * Kodet af Nuriye og Gülsüm Erdogan
+ */
 namespace Empire.Pages.Admin.SkinsMarket
 {
     public class CreateModel : PageModel
@@ -27,12 +29,13 @@ namespace Empire.Pages.Admin.SkinsMarket
         
         public async Task<IActionResult> OnPost(Skin skin)
         {
+            //Add(Create) metoden: 
              _db.Skin.Add(skin);
-            // Saving the changes from website to the database
+            // Gemmer ændringerne fra hjemmesiden til databasen 
             await _db.SaveChangesAsync();
             // Bruger TempData til at vise en besked og give brugeren besked på at skin'et er blevet oprettet.
             TempData["success"] = "Skinopslaget er nu blevet oprettet";
-            // Return til SkinMarket siden efter skin opslaget er oprettet
+            // Returnerer til SkinMarket siden efter skin opslaget er oprettet
             return RedirectToPage("Index");
 
         }
