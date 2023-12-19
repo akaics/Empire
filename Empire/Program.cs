@@ -25,7 +25,7 @@ namespace Empire
 
             // Configure Empire Db Context
             builder.Services.AddDbContext<EmpireContext>(options => options.UseSqlServer(
-                builder.Configuration.GetConnectionString("EmpireConnection")
+                builder.Configuration.GetConnectionString("SharedConnection")
             ));
 
             var app = builder.Build();
