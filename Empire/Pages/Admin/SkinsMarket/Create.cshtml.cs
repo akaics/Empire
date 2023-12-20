@@ -19,6 +19,7 @@ namespace Empire.Pages.Admin.SkinsMarket
         public CreateModel(ApplicationDbContext db)
         {
             _db = db;
+            Skin = new Skin();
 
         }
 
