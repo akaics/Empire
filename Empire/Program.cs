@@ -26,9 +26,9 @@ namespace Empire
             builder.Services.AddDefaultIdentity<EmpireUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            // Konfigurerer Empire Db Context
+            // Konfigurerer Empire Db Context (using ADO.NET connection)
             builder.Services.AddDbContext<EmpireContext>(options => options.UseSqlServer(
-                builder.Configuration.GetConnectionString("SharedConnection")
+                builder.Configuration.GetConnectionString("AdoConnection")
             ));
 
             var app = builder.Build();
